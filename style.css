@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat, sans-serif';
+    color: white;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#cursor{
+  height: 25px;
+  width: 25px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed; 
+  z-index: 99;
+}
+
+#cursor-blur{
+  height: 400px;
+  width: 400px;
+  background-color: rgba(118, 158, 9, 0.541);
+  border-radius: 50%;
+  position: fixed; 
+  filter: blur(45px);
+  z-index: 9;
+}
+#nav {
+    height: 130px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 50px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+  }
+  #nav img {
+    height: 4.5vw;
+  }
+  #nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.15vw;
+  }
+  video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+  }
+  
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  #page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    line-height: 0.8;
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    }
+
+
+  #page1 h1::before{
+      content:"EAT. DRINK. PLAY.";
+      color: hwb(0 0% 100%);
+      position:absolute;
+      top: -4px;
+      left: -4px;
+      -webkit-text-stroke: 1.5px #95c11e ;
+      z-index: -1;
+
+    }
+
+
+  #page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+  }
+
+  #page1 p{
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  #page2{
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    
+  }
+
+  #page3{
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+  #scroller{
+    /*background-color: #000000;*/
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+    
+  }
+
+  #scroller h4{
+    display: inline-block;
+    font-size: 110px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    -webkit-text-stroke: 1px rgb(252, 252, 252);
+    color: transparent;
+    color: #000000;
+    transition: all linear 0.5s;
+  }
+
+  #scroller h4:hover{
+    color: #95c11e;
+  }
+
+  #scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes scroll {
+    from{
+      transform: translate(0);
+    }
+    to{
+      transform: translateX(-100%);
+
+    }
+  }
+
+  #about{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 90px;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us h3{
+    font-size: 60px;
+    font-weight: 850;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+   
+  }
+
+  #about-us p{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+   
+  }
+
+#img1{
+  height: 220px;
+  width: 170px;
+}
+
+#about img{
+  border-radius: 10px;
+}
+
+#fuck{
+  margin-top: 30px;
+}
+
+#cards{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 150px;
+  position: relative;
+  z-index: 10;
+
+}
+
+.card{
+  height: 95%;
+  width: 24%;
+  background-color: #95c11e;
+  position: relative;
+  z-index: 10;
+  opacity: 80%;
+
+}
+
+.card:hover{
+  transform: rotate3d(-1,1,0,20deg);
+  opacity: 1;
+}
+
+#pic1{
+  border-radius: 10px;
+  background-image: url(https://images.unsplash.com/photo-1657660501993-f7305c67e833?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80)
+}
+
+#pic2{
+  border-radius: 10px;
+background-image: url(https://media.istockphoto.com/id/1390038554/photo/tyrannosaurus-from-the-cretaceous-era-3d-illustration.webp?b=1&s=170667a&w=0&k=20&c=Z_c-7dQD7a5dY7Sq8ChoRL134Gx7vRVIoTcGZ3o2rxY=);
+}
+
+#pic3{
+  border-radius: 10px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7aJkjUbPDs8-IBbTA3HkqEntHHxgs0HRoIg&usqp=CAU);
+}
+
+.overlay{
+height: 100%;
+width: 100%;
+padding-top: 80px;
+background-color: #95c11e;
+border-radius: 90px;
+}
+
+
+.overlay h4{
+ font-size: 35px;
+ font-weight: 800;
+ color: hwb(0 0% 100%);
+ margin-bottom: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.overlay p{
+  font-size: 20px;
+  font-weight: 800;
+  color: hsl(0, 0%, 0%);
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+ 
+ #bro{
+  margin-top: 18px;
+ }
+
+ #brother{
+  margin-top: 18px;
+ }
+
+ #sis{
+  margin-top: 18px;
+ }
+
