@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 645;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body{
+    /* background-color: #a7a2a2; */
+    height: 100%;
+    width: 100%;
+}
+
+#loader{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: absolute;
+    background-color: hwb(0 100% 0%);
+    animation: anim2 2s cubic-bezier(0.19, 1, 0.22, 1) 7s both;
+}
+
+#wrapperload{
+    overflow: hidden;
+    width: 500px;
+    height: 100px;
+    /* background-color: red; */
+}
+
+#wrapperload .elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: #000000; */
+}
+
+#wrapperload .elem h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#wrapperload .elem img{
+    width: 40%;
+}
+
+#wrapperload .elem:nth-child(1){
+    animation: anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+}
+
+#wrapperload .elem:nth-child(2){
+    animation: anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+
+#wrapperload .elem:nth-child(3){
+    animation: anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+@keyframes anim{
+    to{
+        margin-top: -100px;
+    }
+}
+
+@keyframes anim2{
+    to{
+        transform: translateY(-100%);
+    }
+}
+
+#main{
+    background-color: aliceblue;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    height: 100vh;
+    width: 100%;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    /* background-color: hsl(193, 44%, 81%); */
+}
+
+nav {
+    height: 80px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav img{
+    width: 190px;
+    cursor: pointer;
+    opacity: .9;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+nav #links {
+    display: flex;
+    align-items: center;
+}
+
+nav #links a {
+    margin-left: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #000000;
+    opacity: .8;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav #links i {
+    cursor: pointer;
+    opacity: 1;
+    z-index: 99;
+    margin-left: 30px;
+}
+nav #links i:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+
+nav #links a:nth-child(3){
+    opacity: .2;
+}
+
+nav #links a:nth-child(2){
+    opacity: .6;
+}
+
+nav #links a:nth-child(3):hover{
+    opacity: .6;
+}
+
+nav #links a:nth-child(2):hover{
+    opacity: .8;
+}
+
+nav #links a:nth-child(1):hover{
+    opacity: 1;
+    font-size: 16px;
+    scale: 1;
+}
+
+#sections{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+#left {
+    width: 50%;
+    height: 100%;
+    padding: 100px;
+}
+
+#left #smline{
+    margin-top: 60px;
+    width: 50px;
+    height: 3px;
+    background-color: #000000;
+    white-space: nowrap;
+}
+
+#left h5{
+  margin-top: 5px;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: gillroy;
+}
+
+#left img{
+    width:34vw;
+    margin-top: 9px;
+}
+
+#left h4 {
+    font-size: 22.2px;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-weight: 100;
+    color: #a7a2a2;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#left h4 span{
+    color: rgb(0, 162, 184);
+}
+
+#playbtn img{
+    width: 80px;
+}
+
+#playbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#playbtn h3{
+   margin-top: -5px;
+   margin-left: 10px;
+   font-weight: 700;
+   opacity: .8;
+   text-transform: uppercase;
+   font-size: 12px;
+   letter-spacing: 5px;
+   word-spacing: 5px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bold{
+    font-size: 13px;
+    font-weight: 900;
+}
+
+#contact{
+    margin-top: 150px;
+}
+
+#contact h2{
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: .8;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#contact h6 span{
+    cursor: pointer;
+    color: #11c6de;
+}
+
+#contact h6 {
+    letter-spacing: 1px;
+    font-size: 11.2px;
+}
+
+#right {
+    width: 50%;
+    height: 100%;
+    margin-top: 30px
+}
+
+#right img{
+    width: 46vw;
+    
+}
+
+#splash{
+    position: absolute;
+    left: -80px;
+    top: 67%;
+    width: 200px;
+}
